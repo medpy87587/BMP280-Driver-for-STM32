@@ -16,8 +16,9 @@ This repository contains a C driver for the BMP280 sensor, compatible with STM32
 ### Initialization
 ```c
 bmp280_init(&bmp);
-Read Sensor Data
-
+```
+## Read Sensor Data
+```c
 int32_t temp_raw, press_raw;
 bmp280_read_raw(&bmp, &temp_raw, &press_raw);
 float temperature = bmp280_compensate_temperature(&bmp, temp_raw);
